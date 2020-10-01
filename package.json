@@ -1,0 +1,24 @@
+{
+  "name": "tck-challenge",
+  "version": "1.0.0",
+  "description": "Prueba de Juan Carlos Navas",
+  "main": "assets/javascripts/application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcnavas/tck-challenge.git"
+  },
+  "author": "Juan Carlos Navas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcnavas/tck-challenge/issues"
+  },
+  "homepage": "https://github.com/jcnavas/tck-challenge#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
