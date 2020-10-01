@@ -1,0 +1,6 @@
+@mixin text-style-base($family, $weight, $size, $leading) {
+  font-family: map-get($font-family-map, $family);
+  font-weight: map-get($font-weight-map, $weight);
+  font-size: map-get($font-size-map, $size);
+  line-height: map-get($line-height-map, $leading);
+}

@@ -1,0 +1,14 @@
+@mixin prefix($property, $value, $browsers: all) {   
+  @if $browsers != all {
+    #{$property}: #{$value};
+    @each $prefix in $browsers {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+  } @else {
+    #{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -webkit-#{$property}: #{$value};
+  }
+}

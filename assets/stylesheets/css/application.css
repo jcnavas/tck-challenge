@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  background-color: #FAFAFA;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: unset;
+  vertical-align: baseline;
+  outline: none;
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit; }
+
+address, article, aside, button, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+ul, li {
+  margin: 0;
+  list-style: none; }
+
+a, button, i {
+  text-decoration: none;
+  transition: color 150ms ease-in-out; }
+
+.is-text-h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.6; }
+
+.is-text-h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.2; }
+
+.is-text-h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1; }
+
+.is-text-h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2; }
+
+.is-text-menu {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1; }
+
+.is-text-link {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4; }
+
+.is-text-paragraph {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4; }
+
+.is-text-tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 1.52px;
+  text-transform: uppercase; }
