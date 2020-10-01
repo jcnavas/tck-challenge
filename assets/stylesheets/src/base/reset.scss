@@ -39,3 +39,8 @@ a, button, i {
   text-decoration: none;
   transition: color $transition-duration-base ease-in-out;
 }
+
+button {
+  background-color: unset;
+  border: unset;
+}
