@@ -1,0 +1,69 @@
+.accordion {
+  color: get-color(primary);
+  background-color: get-color(light);
+  border: 1px solid get-color(border);
+
+  &-header {
+    position: relative;
+    padding: 3.6rem 2rem;
+
+    &--toggle {
+      @include flex(inline-flex, null, flex-start, row, wrap);
+
+      @include breakpoint('sm', null) {
+        @include align-items(center);
+      }
+      
+      &:not(.is-active) {
+        cursor: pointer;
+        transition: opacity $transition-duration-base ease-in-out;
+      
+        &:hover:not(.is-active) {
+          opacity: .75;
+        }
+        
+        .is-text-menu {
+          cursor: pointer;
+        }       
+      }
+    }
+    
+    &--arrow {
+      margin-right: 1.4rem;
+      width: 2rem;
+      height: 3.2rem;
+    }
+    
+    &--title {
+      margin-right: 1.6rem;
+      color: get-color(secondary);
+      
+      @include breakpoint(null, 'sm') {
+        @include flex-shorthand(1, null, null);
+      }
+    }
+     
+    &--detail {
+      display: block;
+      @include flex-basis(100%);
+      margin-top: 1rem;
+      padding-left: 3.5rem;
+      color: get-color(dark);
+    
+      @include breakpoint('sm', null) {
+        display: inline-block;
+        @include flex-basis(unset);
+        vertical-align: top;
+        margin-top: 0;
+        padding-top: 1.3rem;
+        padding-left: 0;
+      }
+    }
+    
+    .tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

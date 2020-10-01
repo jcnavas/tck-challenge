@@ -36,12 +36,14 @@
 
       &:not(.is-active) {
         cursor: pointer;
+      
+        &:hover:not(.is-active) {
+          opacity: .75;
+        }
         
-        @include breakpoint('lg', null) {
-          &:hover:not(.is-active) {
-            opacity: .5;
-          }         
-        }        
+        .is-text-menu {
+          cursor: pointer;
+        }
       }
 
       .is-text-menu {
