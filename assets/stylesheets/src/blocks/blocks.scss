@@ -1,0 +1,42 @@
+.block {
+
+  &-container {
+    margin-top: 8.2rem;    
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    width: calc(100% - 3rem);
+    
+    @include breakpoint('sm', null) {
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+   
+    @include breakpoint('md', null) {
+      margin-top: 4rem;    
+      margin-right: auto;
+      margin-left: auto;
+    }
+    
+    @include breakpoint('xl', null) {
+      width: 100%;
+      max-width: $max-width-desktop;
+    }
+
+    &--header {
+      text-align: center;
+      
+      @include breakpoint('md', null) {
+        @include flex(flex, center, center, row, nowrap);
+      }
+    }
+    
+    &--title {
+      margin-bottom: 2rem;
+      color: get-color(primary);
+      
+      @include breakpoint(767px, null) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

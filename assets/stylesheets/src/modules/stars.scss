@@ -1,0 +1,18 @@
+.stars-rating {
+  @include flex(inline-flex, null, null, row, nowrap);
+  margin-bottom: 4rem;
+  height: 1.2rem;
+  
+  @include breakpoint(767px, null) {
+    margin-bottom: 3.5rem;
+    margin-left: 1.7rem;   
+  }
+    
+  .star {
+    margin-right: 0.5rem;
+    width: 1.1rem;
+    height: 1.2rem;
+    
+
+  }
+}
