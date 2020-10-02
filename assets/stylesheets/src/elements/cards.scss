@@ -9,12 +9,6 @@
   &:not(:last-child ){
     margin-bottom: 3rem;
   }
-  
-  &.is-active {
-    .card-body {
-      max-height: 100%;
-    }
-  }
 
   &-header {
     @include breakpoint('md', null) {
@@ -63,33 +57,42 @@
   }
   
   &-body {
-    margin-right: 1.6rem;
-    margin-left: 1.6rem;
+    display: block;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+    width: 100%;
     max-width: 85rem;
+    height: 100%;
     max-height: 0;
     color: get-color(dark);
     overflow: hidden;
-    transition: max-height $transition-duration-base ease-in-out;
+    transition: max-height $transition-duration-base ease-in;
         
     @include breakpoint('lg', null) {
       margin-right: auto;
       margin-left: auto;
     }
-    
+
+    &.is-active {
+      max-height: 1000vh;
+    }
+       
     &--list {
+      display: block;
       margin-top: 0.8rem;
       margin-bottom: 3.2rem;
       padding-left: 1.8rem;
+      width: 100%;
       max-width: 45rem;
 
       @include breakpoint('sm', null) {
-        max-width: unset;
-        column-count: 2;
-        column-gap: 4.4rem;
+        max-width: 100%;
+        @include prefix(column-count, 2, moz webkit);
+        @include prefix(column-gap, 4.4rem, moz webkit);
       }
       
       @include breakpoint('lg', null) {
-        column-count: 3;
+        @include prefix(column-count, 3, moz webkit);
       }
       
       .is-text-paragraph {
@@ -99,13 +102,14 @@
     }
     
     span.is-text-paragraph {
+      display: block;
+      width: 100%;
+      
       &:first-child {
-        display: block;
         margin-top: 2rem;
       }
       
       &:last-child {
-        display: block;
         margin-bottom: 1.6rem;
       }
     }

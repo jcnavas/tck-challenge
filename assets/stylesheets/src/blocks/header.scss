@@ -30,33 +30,24 @@
     }
      
     &--tab {
-      width: 11.6rem;
-      height: 2.6rem;
-      transition: opacity $transition-duration-base ease-in-out;
 
-      &:not(.is-active) {
+      .is-text-menu {
+        display: inline-block;
+        width: 11.6rem;
+        height: 2.6rem;
+        text-align: center;
+        color: get-color(secondary);
+        transition: opacity $transition-duration-base ease-in-out;
         cursor: pointer;
-      
+        
         &:hover:not(.is-active) {
           opacity: .75;
         }
-        
-        .is-text-menu {
-          cursor: pointer;
-        }
-      }
-
-      .is-text-menu {
-        width: 100%;
-        text-align: center;
-        color: get-color(secondary);
-      }
-            
-      &.is-active {
-        border-bottom: 2px solid get-color(primary);
-        
-        .is-text-menu {
+                
+        &.is-active {
           color: get-color(primary);
+          border-bottom: 2px solid get-color(primary);
+          pointer-events: none;
         }
       }
     }

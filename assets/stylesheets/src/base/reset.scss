@@ -5,6 +5,8 @@ html {
   font-size: 62.5%;
   font-family: map-get($font-family-map, secondary);
   line-height: map-get($line-height-map, 2);
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
   @include prefix(box-sizing, border-box, moz webkit);
 }
 

@@ -1,15 +1,18 @@
 .button-block {
   @include flex(flex, null, center, row, nowrap);
-
+  margin: 0;
   padding: 1rem;
   min-height: 4.6rem;
   color: get-color(dark);
   background-color: get-color(medium);
   border: 1px solid get-color(medium);
-  
-  .is-active & {
-    color: get-color(primary);
-    border-color: get-color(primary);
+  transition:
+    color $transition-duration-base ease-in-out,
+    background-color $transition-duration-base ease-in-out,
+    border-color $transition-duration-base ease-in-out;
+    
+  > * {
+    cursor: pointer;
   }
   
   &--label {
@@ -22,24 +25,24 @@
   }
   
   &--input {
+    margin: 0;
+    padding: 0;
     width: 1.6rem;
     height: 1.6rem;
     border:1px solid get-color(dark);
     border-radius:50%;
     outline:none;
     -webkit-appearance:none;
-    
-    &:hover {
-      box-shadow:0 0 5px 0px orange inset;
-    }
-    
+    transition: border-color $transition-duration-base ease-in-out;
+     
     &::before {
       content:'';
       display:block;
-      width:60%;
-      height:60%;
-      margin: 20% auto;    
-      border-radius:50%;    
+      width: 1rem;
+      height: 1rem;
+      margin: 0.2rem;    
+      border-radius:50%;
+      outline: none;
     }
 
     &:checked {
@@ -52,6 +55,21 @@
   }
   
   &--text {
-    margin-left: 1.2rem;
+    margin: 0 0 0 1.2rem;
+  }
+  
+  .accommodation-option:not(.is-active):hover &  {
+    color: get-color(light);
+    background-color: get-color(primary);
+    
+    &--input {
+      border-color: get-color(light);
+    }
+  }
+  
+  .accommodation-option.is-active & {
+    color: get-color(primary);
+    border-color: get-color(primary);
   }
 }
+
