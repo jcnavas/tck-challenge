@@ -1,0 +1,39 @@
+// Add global styles for typography
+// and define classes for UI KIT font variants here
+// For example:
+// .t-h1 {
+//   font: $f-bold rem(24) / rem(38) $f-title;
+// }
+// ...
+
+.is-text-h1 {
+  @include text-style-base('primary', 'bold', 5, 4)
+}
+
+.is-text-h2 {
+  @include text-style-base('primary', 'regular', 5, 2)
+}
+
+.is-text-h3 {
+  @include text-style-base('secondary', 'bold', 4, 1)
+}
+
+.is-text-h4 {
+  @include text-style-base('secondary', 'regular', 3, 2)
+}
+
+.is-text-menu {
+  @include text-style-base('primary', 'regular', 4, 1)
+}
+
+.is-text-link {
+  @include text-style-base('primary', 'bold', 2, 3)
+}
+
+.is-text-paragraph {
+  @include text-style-base('secondary', 'regular', 2, 3)
+}
+
+.is-text-tag {
+  @include text-style-base('secondary', 'regular', 1, 2); letter-spacing: 1.52px; text-transform: uppercase;
+}

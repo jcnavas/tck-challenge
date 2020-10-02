@@ -1,0 +1,75 @@
+.button-block {
+  @include flex(flex, null, center, row, nowrap);
+  margin: 0;
+  padding: 1rem;
+  min-height: 4.6rem;
+  color: get-color(dark);
+  background-color: get-color(medium);
+  border: 1px solid get-color(medium);
+  transition:
+    color $transition-duration-base ease-in-out,
+    background-color $transition-duration-base ease-in-out,
+    border-color $transition-duration-base ease-in-out;
+    
+  > * {
+    cursor: pointer;
+  }
+  
+  &--label {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  &--input {
+    margin: 0;
+    padding: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border:1px solid get-color(dark);
+    border-radius:50%;
+    outline:none;
+    -webkit-appearance:none;
+    transition: border-color $transition-duration-base ease-in-out;
+     
+    &::before {
+      content:'';
+      display:block;
+      width: 1rem;
+      height: 1rem;
+      margin: 0.2rem;    
+      border-radius:50%;
+      outline: none;
+    }
+
+    &:checked {
+      border-color: get-color(selected);
+      
+      &::before {
+        background: get-color(selected);
+      }
+    }
+  }
+  
+  &--text {
+    margin: 0 0 0 1.2rem;
+  }
+  
+  .accommodation-option:not(.is-active):hover &  {
+    color: get-color(light);
+    background-color: get-color(primary);
+    
+    &--input {
+      border-color: get-color(light);
+    }
+  }
+  
+  .accommodation-option.is-active & {
+    color: get-color(primary);
+    border-color: get-color(primary);
+  }
+}
+

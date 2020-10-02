@@ -3,8 +3,81 @@
 
 // Colors
 $c-primary: #003970;
-// ...
 
 // Font
 $f-base: 16;
-// ...
+
+// Colors 
+  $anthracite: #4E5055 !default;
+  $blue:       #0C75C5 !default;
+  $green:      #6DC138 !default;
+  $grey:       #616469 !default;
+  $slate:      #505C77 !default;
+  $navy:       #003970 !default;
+  $red:        #BE2227 !default;
+  $sky-blue:   #C9E3F9 !default;
+  $silver:     #FAFAFA !default;
+  $white:      #FFFFFF !default;
+  
+  $color-map: (
+    primary:   $navy,
+    secondary: $blue,
+    selected:  $green, 
+    featured:  $red,
+    light:     $white,
+    medium:    $silver,
+    dark:      $anthracite,
+    detail:    $sky-blue,
+    border:    rgba($grey, 0.2),
+    shadow:    rgba($slate, 0.2)
+  ) !default;
+  
+// Breakpoints
+  $breakpoint-map: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+  ) !default;
+  
+// Font Family
+  $font-family-primary:   'Roboto Slab', serif !default;
+  $font-family-secondary: 'Roboto', sans-serif !default;
+
+  $font-family-map: (
+    primary:   $font-family-primary,
+    secondary: $font-family-secondary
+  ) !default;
+
+// Font Weight 
+  $font-weight-map: (
+    bold:     700,
+    regular:  400
+  ) !default;
+
+// Font Size 
+  $font-size-map: (
+    5: 2.4rem,
+    4: 1.6rem,
+    3: 1.5rem,
+    2: 1.4rem,
+    1: 1.2rem
+  ) !default;
+  
+// Leading 
+  $line-height-map: (
+    4: 1.6,
+    3: 1.4, 
+    2: 1.2,
+    1: 1,
+  ) !default;
+
+// Breakpoints
+$max-width-tablet: map-get($breakpoint-map, 'md') !default;
+$max-width-desktop: map-get($breakpoint-map, 'xl') !default;
+  
+// Shadows
+$box-shadow-base: 0px 1px 2px get-color(shadow);
+  
+// Transition
+$transition-duration-base: 150ms;

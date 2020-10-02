@@ -1,0 +1,55 @@
+@mixin breakpoint($min, $max) {
+  
+  // Min
+  @if ($min != null) and ($max == null) {
+    @if (type-of($min) == string) {
+      @media (min-width: map-get($breakpoint-map, $min)) {
+        @content;
+      }
+    }
+    @else if (type-of($min) == number) {
+      @media (min-width: $min) {
+        @content;
+      }
+    }
+  }
+
+  // Max
+  @if ($min == null) and ($max != null) {
+    @if (type-of($max) == string) {
+      @media (max-width: map-get($breakpoint-map, $max)) {
+        @content;
+      }
+    }
+    @else if (type-of($max) == number) {
+      @media (max-width: $max) {
+        @content;
+      }
+    }
+  }
+  
+  // Min and Max
+  @if ($min != null) and ($max != null) {
+    @if (type-of($min) == string) and (type-of($max) == string) {
+      @media (min-width: map-get($breakpoint-map, $min)) and (max-width: map-get($breakpoint-map, $max)) {
+        @content;
+      }
+    }
+    @else if (type-of($min) == string) and (type-of($max) == number) {
+      @media (min-width: map-get($breakpoint-map, $min)) and (max-width: $max) {
+        @content;
+      }
+    }
+    @else if (type-of($min) == number) and (type-of($max) == string) {
+      @media (min-width: $min) and (max-width: map-get($breakpoint-map, $max)) {
+        @content;
+      }
+    }
+    @else if (type-of($min) == number) and (type-of($max) == number) {
+      @media (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    }
+  }
+
+}

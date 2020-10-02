@@ -1,0 +1,7 @@
+@each $name, $weight in $font-weight-map {
+  .is-font-#{$name} { font-weight: $weight; }
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}

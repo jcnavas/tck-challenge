@@ -1,0 +1,81 @@
+.accommodation {
+  $padding-local: 2.4rem;
+
+  @include flex(flex, space-around, null, row, wrap);
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include breakpoint(null, 'sm') {
+    max-width: 35rem;
+  }
+  
+  @include breakpoint('md', 'lg') {
+    max-width: 70rem;
+  }
+    
+  &-option {
+    position: relative;
+    margin-bottom: 3rem;
+    padding: $padding-local;
+    padding-bottom: 4.6rem + ($padding-local * 2);
+    width: 100%;
+    min-height: 32rem;
+    color: get-color(primary);
+    background-color: get-color(light);
+    border: 1px solid get-color(border);
+    cursor: pointer;
+    
+    @include breakpoint('sm', null) {
+      min-height: 40rem;
+      width: calc(50% - 3rem);
+    }
+    
+    @include breakpoint('lg', null) {
+      margin-bottom: 0;
+      width: calc(25% - 3rem);
+      min-height: 53rem;
+    }
+    
+    &:hover {
+      box-shadow: 0px 4px 6px get-color(shadow);
+      transition: box-shadow $transition-duration-base ease-in-out;
+    }
+    
+    &.is-active {
+      border-color: get-color(primary);
+    }
+    
+    &--title {
+      margin-bottom: 2.2rem;
+      padding-bottom: 2.6rem;
+      position: relative;
+      text-align: center;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 4.1rem);
+        width: 8.2rem;
+        height: 1px;
+        background-color: get-color(detail);
+      }
+    }
+    
+    &--list {
+      padding-left: $padding-local;
+    }
+
+    &--info {
+      margin-bottom: 1.6rem;
+      list-style: disc;
+    }
+    
+    .button-block {
+      position: absolute;
+      bottom: $padding-local;
+      right: $padding-local;
+      left: $padding-local;
+    }
+  }
+}

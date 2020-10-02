@@ -1,0 +1,48 @@
+@import "functions/index";
+@import "mixins/index";
+
+html {
+  font-size: 62.5%;
+  font-family: map-get($font-family-map, secondary);
+  line-height: map-get($line-height-map, 2);
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+  @include prefix(box-sizing, border-box, moz webkit);
+}
+
+body {
+  margin: 0;
+  font-size: map-get($font-size-map, 2);
+  background-color: get-color(medium);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration:unset;
+  vertical-align: baseline;
+  outline: none;
+  @include prefix(box-sizing, inherit, moz webkit);
+}
+
+address, article, aside, button, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+ul, li {
+  margin: 0;
+  list-style: none;
+}
+
+a, button, i {
+  text-decoration: none;
+  transition: color $transition-duration-base ease-in-out;
+}
+
+button {
+  background-color: unset;
+  border: unset;
+}
